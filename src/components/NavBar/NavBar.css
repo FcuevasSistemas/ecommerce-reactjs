@@ -1,0 +1,33 @@
+
+.MuiToolbar-root {
+    background-color: rgb(21, 22, 22);
+}
+
+.navlogo {
+    width: 120px;
+    margin: auto;
+    padding: 20px;
+    
+}
+
+.navlogo img {
+    width: 100%; 
+    float: left;  
+}
+
+
+.menubtn button {
+    font-size: 18px;
+    padding: 20px;
+    font-weight: 550;
+    background: #00CFC1;
+    background: linear-gradient(to right, #00CFC1 32%, #CF0CB5 73%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.menubtn button:hover {
+    font-size: 20px;
+    font-weight: 600;
+    transition: 1s;
+}
