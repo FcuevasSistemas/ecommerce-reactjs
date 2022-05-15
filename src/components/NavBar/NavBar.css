@@ -1,19 +1,24 @@
 
 .MuiToolbar-root {
     background-color: rgb(21, 22, 22);
+    max-height: 110px;
+    min-width: none;
+    box-sizing: border-box;
 }
 
 .navlogo {
-    width: 120px;
+    width: 90px;
     margin: auto;
-    padding: 20px;
+    
     
 }
 
 .navlogo img {
-    width: 100%; 
-    float: left;  
+    width: 100%;
+    padding: 10px;
 }
+
+
 
 
 .menubtn button {
@@ -21,7 +26,7 @@
     padding: 20px;
     font-weight: 550;
     background: #00CFC1;
-    background: linear-gradient(to right, #00CFC1 32%, #CF0CB5 73%);
+    background: linear-gradient(to right, #ffda0a 32%, #CF0CB5 73%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -29,5 +34,6 @@
 .menubtn button:hover {
     font-size: 20px;
     font-weight: 600;
-    transition: 1s;
+    transition: .5s;
 }
+

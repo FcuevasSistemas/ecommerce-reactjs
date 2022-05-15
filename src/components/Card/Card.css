@@ -1,0 +1,24 @@
+
+
+.Card-Product {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    
+    
+}
+
+.Card-Product p{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.Card-Product span {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.card-image img {
+    width: 100%;
+}

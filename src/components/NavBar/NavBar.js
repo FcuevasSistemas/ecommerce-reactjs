@@ -1,3 +1,4 @@
+import './NavBar.css'
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -8,7 +9,7 @@ import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 const NavBar = () => {
     return (
         <Box sx={{ flexGrow: 1 }}>
-        <AppBar>
+        <AppBar position="sticky">
             <Toolbar>
                 <div className="menubtn">
                     <Button color="inherit" className="btn1">Productos</Button>
@@ -17,8 +18,8 @@ const NavBar = () => {
                 <div className="navlogo">
                     <img src="./cucusneakerslogo.png" alt=""/>
                 </div>
-                <Button color="inherit">
-                    <ShoppingBasketIcon/>
+                <Button color="inherit"  className="btncart">
+                    <ShoppingBasketIcon fontSize="large"/>
                 </Button>
             </Toolbar>
         </AppBar>
