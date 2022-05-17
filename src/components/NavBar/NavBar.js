@@ -4,7 +4,7 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
-import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
+import CartWidget from '../CartWidget/CartWidget'
 
 const NavBar = () => {
     return (
@@ -18,9 +18,7 @@ const NavBar = () => {
                 <div className="navlogo">
                     <img src="./cucusneakerslogo.png" alt=""/>
                 </div>
-                <Button color="inherit"  className="btncart">
-                    <ShoppingBasketIcon fontSize="large"/>
-                </Button>
+                <CartWidget/>
             </Toolbar>
         </AppBar>
         </Box>

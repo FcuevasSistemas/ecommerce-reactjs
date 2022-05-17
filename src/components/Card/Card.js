@@ -1,22 +1,16 @@
 import './Card.css';
-import { Button } from '@mui/material';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-
+import { Button } from '@mui/material';
 
 const CardProduct = (data) => {
-    const { image, title, price } = data
+    const { image, title, price, producttitle } = data
 return (
     <Card>
         <CardContent>
-        <div className='Card-Product'>
-            <p>{title}</p>
-            <div className='card-image'>
-                <img src={`./${image}`} alt=''/>
-            </div>
-            <span>u$s ${price}</span>
-            <Button variant="contained" color="success" className='btncompra'>Comprar</Button>
-        </div>
+        <h1>{producttitle}</h1>
+
+        <Button variant="contained" color="success" className='btncompra'>Comprar</Button>
     </CardContent>
     </Card>
 )
@@ -24,3 +18,5 @@ return (
 }
 
 export default CardProduct
+
+
