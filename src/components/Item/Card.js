@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import { Button } from '@mui/material';
 
 const CardProduct = (data) => {
-    const { image, title, price,} = data
+    const { image, title, price, stock} = data
 return (
     <Card>
         <CardContent>
