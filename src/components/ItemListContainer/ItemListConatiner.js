@@ -1,12 +1,14 @@
-import './ItemCount'
-import ItemCount from './ItemCount'
+import ItemCount from "./ItemCount"
 
-const ItemListContainer = ({ greeting }) => {
+
+
+
+const ItemListContainer = ({ greeting}) => {
     return (
         <>
         <h1>{greeting}</h1>
-        <ItemCount/>
-        </>
+            <ItemCount stock={5}/>
+            </>
     )
 }
 
