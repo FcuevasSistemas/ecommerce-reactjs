@@ -3,9 +3,11 @@ import Button from "@mui/material/Button";
 
 function CartWidget() {
     return (
-        <Button color="inherit"  className="btncart">
-                    <ShoppingBasketIcon fontSize="large"/>
-        </Button>
+        <div className='shoppingicon'>  <Button color="inherit"  className="btncart">
+        <ShoppingBasketIcon fontSize="large"/>
+    </Button>
+    </div>
+    
     )
 }
 

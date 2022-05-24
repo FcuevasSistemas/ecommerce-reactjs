@@ -18,7 +18,8 @@ const NavBar = () => {
                 <div className="navlogo">
                     <img src="./cucusneakerslogo.png" alt=""/>
                 </div>
-                <CartWidget/>
+                <div className='cartwidget'><CartWidget/></div>
+                
             </Toolbar>
         </AppBar>
         </Box>

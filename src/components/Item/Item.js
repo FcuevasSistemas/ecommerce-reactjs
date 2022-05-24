@@ -5,7 +5,7 @@ import { Button } from '@mui/material';
 import ItemCount from '../ItemListContainer/ItemCount'
 
 
-const CardItem = ({ image, title, price }) => {
+const Item = ({ image, title, price, stock }) => {
     return(
         <Card sx={{ minWidth: 275 }} className="card-item-container">
             <CardContent>
@@ -18,7 +18,7 @@ const CardItem = ({ image, title, price }) => {
                             <p>{title}</p>
                             <span>u$s {price}</span>
                         </div>
-                        <ItemCount/>
+                        <ItemCount stock={stock} />
                         <Button variant={'contained'} className="card-item-button">Comprar</Button>
                     </div>
                 </div>
@@ -28,5 +28,5 @@ const CardItem = ({ image, title, price }) => {
 }
 
 
-export default CardItem
+export default Item
 

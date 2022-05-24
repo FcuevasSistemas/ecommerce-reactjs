@@ -19,7 +19,10 @@
 }
 
 
-
+.shoppingicon {
+    display: block;
+    float: right; 
+}
 
 .menubtn button {
     font-size: 18px;
