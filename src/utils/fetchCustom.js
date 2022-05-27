@@ -25,7 +25,7 @@
             id: 3
         },
         {
-            title : 'Nike Sb x Parra',
+            title : 'Nike Sb x Piet Parra',
             price : 450,
             image : 'sbparradunk.jpg',
             description: '',
@@ -34,10 +34,21 @@
         },
     ]
 
+    const producto = {
+            title : 'Nike Sb x Piet Parra',
+            price : 450,
+            image : 'sbparradunk.jpg',
+            description: '',
+            stock: 5,
+            id: 3
+    }
+
+    export default producto;
+
     export  const getProducts = () => {
         return new Promise( (resolve, reject) => {
             setTimeout(() => {
                 resolve(productos)
-            }, 2000)
+            }, 1000)
         })
     }  

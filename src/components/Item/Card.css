@@ -113,3 +113,20 @@
     padding: 10px
 }
 
+.selectbox {
+    padding: 20px
+}
+
+
+.detailcard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #999;
+    width: 500px;
+}
+
+.parradetail img {
+    width: 100%;
+    
+}

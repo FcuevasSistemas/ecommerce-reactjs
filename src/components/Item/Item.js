@@ -2,7 +2,8 @@ import './Card.css';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { Button } from '@mui/material';
-import ItemCount from '../ItemListContainer/ItemCount'
+import ItemCount from '../ItemListContainer/ItemCount';
+import SelectBox from '../SelectBox/SelectBox';
 
 
 const Item = ({ image, title, price, stock }) => {
@@ -19,8 +20,9 @@ const Item = ({ image, title, price, stock }) => {
                             <span>u$s {price}</span>
                         </div>
                         <ItemCount stock={stock} />
-                        <Button variant={'contained'} className="card-item-button">Comprar</Button>
+                        <Button variant={'contained'} className="card-item-button">Ver Más</Button>
                     </div>
+
                 </div>
             </CardContent>
             </Card>
