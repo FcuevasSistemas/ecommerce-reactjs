@@ -4,9 +4,10 @@ import CardContent from '@mui/material/CardContent';
 import { Button } from '@mui/material';
 import ItemCount from '../ItemListContainer/ItemCount';
 import SelectBox from '../SelectBox/SelectBox';
+import {Link} from 'react-router-dom' 
 
 
-const Item = ({ image, title, price, stock }) => {
+const Item = ({ image, title, price, stock, id }) => {
     return(
         <Card sx={{ minWidth: 275 }} className="card-item-container">
             <CardContent>
@@ -20,7 +21,7 @@ const Item = ({ image, title, price, stock }) => {
                             <span>u$s {price}</span>
                         </div>
                         <ItemCount stock={stock} />
-                        <Button variant={'contained'} className="card-item-button">Ver Más</Button>
+                        <Link to={`/item/${id}`}><Button variant={'contained'} className="card-item-button">Ver Más</Button></Link>
                     </div>
 
                 </div>

@@ -1,7 +1,7 @@
 import ItemCount from "../ItemListContainer/ItemCount"
 import SelectBox from "../SelectBox/SelectBox"
 import { Button } from "@mui/material"
-const ItemDetail = ({data, stock}) => {
+const ItemDetail = ({data}) => {
     return (
             <>
             <div className="detailcard">
@@ -10,14 +10,11 @@ const ItemDetail = ({data, stock}) => {
                 <h3>u$s {data.price}</h3>
                 <p>Hasta 3 cuotas de u$s {data.price / 3}</p>
             </div>
-            <div className="parradetail">
+            <div className="detail">
                 <img src={`./${data.image}`} alt="" />
-                <p>En esta entrega, Nike forma una colaboración
-                    con el emblemático diseñador
-                    Holandés Piet Parra. Creando una silueta
-                    con su reconocido arte abstracto.
+                <p>
                 </p>
-                <ItemCount stock={stock}/>
+                <ItemCount />
                 <SelectBox />
                 <Button color="success" variant={'contained'} className="card-item-button">Comprar</Button>
             </div>

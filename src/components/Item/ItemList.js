@@ -8,7 +8,12 @@ const ItemList = ({title, products}) => {
             {products.map( ({ title, price, image, id, stock }) => {
                 return (
                     <Grid item md={3} key={id}>
-                        <Item title={title} price={price} image={image} stock={stock} />
+                        <Item 
+                        title={title} 
+                        price={price} 
+                        image={image} 
+                        stock={stock} 
+                        id={id} />
                     </Grid>
                 )
             })
