@@ -7,7 +7,7 @@ import SelectBox from '../SelectBox/SelectBox';
 import {Link} from 'react-router-dom' 
 
 
-const Item = ({ image, title, price, stock, id }) => {
+const Item = ({ image, title, price, stock, id, category }) => {
     return(
         <Card sx={{ minWidth: 275 }} className="card-item-container">
             <CardContent>
@@ -20,10 +20,13 @@ const Item = ({ image, title, price, stock, id }) => {
                             <p>{title}</p>
                             <span>u$s {price}</span>
                         </div>
+                        <div className='card-btn'>
                         <ItemCount stock={stock} />
                         <Link to={`/item/${id}`}><Button variant={'contained'} className="card-item-button">Ver Más</Button></Link>
+                        <Link to={`/category/${category}`}><Button color="secondary" variant={'contained'}  className="card-item-button">Categoria</Button></Link>
+                    
                     </div>
-
+                    </div>
                 </div>
             </CardContent>
             </Card>

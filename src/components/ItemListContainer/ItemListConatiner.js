@@ -1,8 +1,12 @@
 import { useState, useEffect } from 'react';
 import ItemList from '../Item/ItemList';
 import {getProducts} from '../../utils/fetchCustom'
+import { useParams } from 'react-router-dom'
+
+
 const ItemListContainer = ({greeting}) => {
     const [products, setProducts] = useState([])
+    const { category } = useParams()
 
     useEffect( () => {
         getProducts()

@@ -13,8 +13,8 @@ function App() {
   <div className="App">
     <Routes>
       <Route path='/' element={<ItemListContainer />}/>
-      <Route path='/product/:id' element={<ContainerDetail/>}/>
-      {/* <Route path='/item/:category' element={<ContainerDetail/>}/> */}
+      <Route path='/item/:id' element={<ContainerDetail/>}/>
+      <Route path='/category/:id' element={<ContainerDetail/>}/>
     </Routes>
       </div>
       </>

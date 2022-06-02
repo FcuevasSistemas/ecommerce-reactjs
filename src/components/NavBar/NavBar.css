@@ -2,13 +2,12 @@
 .MuiToolbar-root {
     background-color: rgb(21, 22, 22);
     max-height: 110px;
-    min-width: none;
     box-sizing: border-box;
 }
 
 .navlogo {
     width: 90px;
-    margin: auto;
+    margin: 0 auto;
     
     
 }

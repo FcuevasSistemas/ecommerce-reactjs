@@ -17,14 +17,13 @@ const ContainerDetail = () => {
     // }
 
     useEffect(() => {
-        setProduct(productFilter)
+        
 
-
+    const productFilter = productos.find((product) => {
+        return product.id === parseInt(id);
     })
-
-    const productFilter = productos.find( (product) => {
-        return product.id === id
-    })
+    setProduct(productFilter)
+},[id])
 
     return (
         <>
@@ -32,7 +31,7 @@ const ContainerDetail = () => {
             <h1>Detalles del producto</h1>
             <h3>Articulo número: {id}</h3>
         </div>
-        <ItemDetail data={product}/>
+        {product && <ItemDetail data={product}/>}
         </>
     )
 }

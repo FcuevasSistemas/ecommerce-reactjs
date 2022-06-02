@@ -11,7 +11,7 @@ const ItemDetail = ({data}) => {
                 <p>Hasta 3 cuotas de u$s {data.price / 3}</p>
             </div>
             <div className="detail">
-                <img src={`./${data.image}`} alt="" />
+                <img src={`/${data.image}`} alt="Zapatilla" />
                 <p>
                 </p>
                 <ItemCount />
