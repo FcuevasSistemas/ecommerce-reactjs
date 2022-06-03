@@ -29,7 +29,8 @@ const ContainerDetail = () => {
         <>
         <div>
             <h1>Detalles del producto</h1>
-            <h3>Articulo número: {id}</h3>
+            <h3>Articulo: {id}</h3>
+            
         </div>
         {product && <ItemDetail data={product}/>}
         </>

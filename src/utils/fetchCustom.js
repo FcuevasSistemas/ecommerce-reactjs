@@ -84,9 +84,6 @@
             description: '',
             stock: 5,
             id: 4,
-            /*description: "En esta ocasión Nike Sb crea una colaboracion
-            con el artista Piet Parra de origen holandés, el colorway 
-            se basa en las obras de este artista: el arte abstracto"*/
     },
         
             {
