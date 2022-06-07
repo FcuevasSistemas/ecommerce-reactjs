@@ -1,9 +1,17 @@
 import ItemCount from "../ItemListContainer/ItemCount"
 import SelectBox from "../SelectBox/SelectBox"
 import { Button } from "@mui/material"
-const ItemDetail = ({data}) => {
+import {React, useState } from 'react'
+import {Link} from 'react-router-dom'
+const ItemDetail = ({data, actualizarCantidad}) => {
+    const [cantidad, setCantidad] = useState(1)
+    const [showButton, setShowButton] = useState(false)
+    const addProductToCart = () =>{
+        console.log ("Producto a agregar", data)
+        console.log("Cantidad:",  cantidad)
+    }
     return (
-            <>
+        <>
             <div className="detailcard">
             <div>
                 <h2>{data.title}</h2>
@@ -14,13 +22,20 @@ const ItemDetail = ({data}) => {
                 <img src={`/${data.image}`} alt="Zapatilla" />
                 <p>
                 </p>
-                <ItemCount />
                 <SelectBox />
-                <Button color="success" variant={'contained'} className="card-item-button">Comprar</Button>
+                {!showButton ?
+                <ItemCount 
+                cantidad={cantidad}
+                setShowButton = {setShowButton}
+                actualizarCantidad={setCantidad}
+                />
+                :
+                <Button variant="contained" color="error"><Link to='/cart'>Terminar compra</Link></Button>}
             </div>
-            </div>
-            </>
+                </div>
         
+        
+                </>
     )
 }
 

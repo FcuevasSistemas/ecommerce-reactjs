@@ -12,7 +12,7 @@ const NavBar = () => {
         <AppBar position="sticky">
             <Toolbar>
                 <div className="menubtn">
-                    <Button color="inherit" className="btn1">Productos</Button>
+                    <Link to='/'> <Button color="inherit" className="btn1">Productos</Button></Link>
                     <Button color="inherit" className="btn2">Historia</Button>
                 </div>
                 <div className="navlogo">

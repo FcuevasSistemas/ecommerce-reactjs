@@ -4,30 +4,26 @@ import {React, useState } from 'react';
 
 
     
-function ItemCount ({stock}) {
-    const [counter, setCounter] = useState(1);
-        //increase counter
-        const increase = () => {
-        if (counter < stock) {setCounter((count) => count + 1)};
-        };
-        //decrease counter
-        const decrease = () => {
-        if (counter > 1) {setCounter((count) => count - 1)};
-        };
+const ItemCount = ({cantidad, actualizarCantidad, setShowButton}) => {
+    const [quantity, setQuantity] = useState(1)
     
-        
-    
-        return (
-        <div className="item-counter">
-            <span className="counter__output">{counter}</span>
-            <div className="btn__container">
-            
-            <Button className="control__btn" onClick={decrease} variant="outlined" color="error">-</Button>
-            
-            <Button className="control__btn" onClick={increase} variant="outlined" color="success">+</Button>
-            </div>
-        </div>
-        );
+    const removeProduct = () => {
+        actualizarCantidad(cantidad - 1)
     }
 
-    export default ItemCount; 
+    const addProduct = () => {
+        actualizarCantidad(cantidad + 1)
+    };
+    
+    return (
+        <>
+        <div className='counter-btn'>
+            <Button onClick={removeProduct} color='error' variant='outlined'>-</Button>
+            <p>{cantidad}</p>
+            <Button onClick={addProduct} color='success' variant='outlined'>+</Button>
+        </div>
+        <Button onClick={() => setShowButton(true)} color="success" variant={'contained'} className="card-item-button">Comprar</Button>
+        </>
+    )
+}
+export default ItemCount
