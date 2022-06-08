@@ -1,14 +1,17 @@
 import { useState, useEffect } from 'react';
 import ItemList from '../Item/ItemList';
-import {getProducts} from '../../utils/fetchCustom'
+import {getProducts, getByCategory} from '../../utils/fetchCustom'
 import { useParams } from 'react-router-dom'
 
 
 const ItemListContainer = ({greeting}) => {
     const [products, setProducts] = useState([])
-    const { category } = useParams()
+    const { brand } = useParams()
 
     useEffect( () => {
+        if(brand){
+            getByCategory(brand).then(response=>setProducts(response))
+        }else{
         getProducts()
         .then( (response) => {
                 console.log("Then : Respuesta Promesa: ", response)
@@ -20,7 +23,8 @@ const ItemListContainer = ({greeting}) => {
         .finally( () => {
             console.log("Finally: termino la promesa")
         })
-    }, []);
+    }
+    }, [brand]);
     return (
         <>
         <h1>{greeting}</h1>

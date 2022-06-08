@@ -7,7 +7,7 @@
             description: '',
             stock: 6,
             id: 1,
-            category: 'Adidas'
+            category: 'adidas'
 
         },
         {
@@ -17,7 +17,7 @@
             description: '',
             stock: 4,
             id: 2,
-            category: 'Jordan'
+            category: 'jordan'
         },
         {
             title : 'Air Max 1 x Concepts',
@@ -26,7 +26,7 @@
             description: '',
             stock: 8,
             id: 3,
-            category: 'Nike'
+            category: 'nike'
         },
         {
             title : 'Nike Sb x Piet Parra',
@@ -35,7 +35,7 @@
             description: '',
             stock: 5,
             id: 4,
-            category: 'Nike'
+            category: 'nike'
         },
         {
             title : 'Adidas Forum Bad Bunny',
@@ -44,7 +44,7 @@
             description: '',
             stock: 3,
             id: 5,
-            category: 'Adidas'
+            category: 'adidas'
         },
         {
             title : 'New Balance 550',
@@ -53,7 +53,7 @@
             description: '',
             stock: 12,
             id: 6,
-            category: 'NewBalance'
+            category: 'newbalance'
         },
         {
             title : 'Nike Dunk Low Sour Apple',
@@ -62,7 +62,7 @@
             description: '',
             stock: 4,
             id: 7,
-            category: 'Nike'
+            category: 'nike'
 
         },
         {
@@ -72,7 +72,7 @@
             description: '',
             stock: 6,
             id: 8,
-            category: 'Nike'
+            category: 'nike'
 
         },
     ]
@@ -101,7 +101,7 @@
                 description: '',
                 stock: 6,
                 id: 1,
-                category: 'Adidas'
+                category: 'adidas'
     
             },
 
@@ -112,7 +112,7 @@
                 description: '',
                 stock: 4,
                 id: 2,
-                category: 'Jordan'
+                category: 'jordan'
             },
             {
                 title : 'Adidas Forum Bad Bunny',
@@ -121,7 +121,7 @@
                 description: '',
                 stock: 3,
                 id: 5,
-                category: 'Adidas'
+                category: 'adidas'
             },
             {
                 title : 'New Balance 550',
@@ -130,7 +130,7 @@
                 description: '',
                 stock: 12,
                 id: 6,
-                category: 'NewBalance'
+                category: 'newbalance'
             },
             {
                 title : 'Nike Dunk Low Sour Apple',
@@ -139,7 +139,7 @@
                 description: '',
                 stock: 4,
                 id: 7,
-                category: 'Nike'
+                category: 'nike'
     
             },
             {
@@ -149,7 +149,7 @@
                 description: '',
                 stock: 6,
                 id: 8,
-                category: 'Nike'
+                category: 'nike'
     
             },
     
@@ -160,6 +160,15 @@
         return new Promise( (resolve, reject) => {
             setTimeout(() => {
                 resolve(productos)
+            }, 1000)
+        })
+    }  
+
+    export  const getByCategory = (brand) => {
+        return new Promise( (resolve, reject) => {
+            setTimeout(() => {
+                const newProductos = productos.filter((producto)=>producto.category === brand)
+                resolve(newProductos)
             }, 1000)
         })
     }  

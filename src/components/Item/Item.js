@@ -13,7 +13,7 @@ const Item = ({ image, title, price, id, category }) => {
             <CardContent>
                 <div className="card-item">
                     <div className="card-item__img-box">
-                        <img src={`./${image}`} alt={"producto"}/> 
+                        <img src={`/${image}`} alt={"producto"}/> 
                     </div>
                     <div className='card-item__data-box'>
                         <div className='card-info-data'>
