@@ -3,7 +3,9 @@ import SelectBox from "../SelectBox/SelectBox"
 import { Button } from "@mui/material"
 import {React, useState } from 'react'
 import {Link} from 'react-router-dom'
+import CartContext  from '../context/CartContext';
 const ItemDetail = ({data, actualizarCantidad}) => {
+    
     const [cantidad, setCantidad] = useState(1)
     const [showButton, setShowButton] = useState(false)
     const addProductToCart = () =>{
@@ -22,6 +24,7 @@ const ItemDetail = ({data, actualizarCantidad}) => {
                 <img src={`/${data.image}`} alt="Zapatilla" />
                 <p>
                 </p>
+                <p>{`/item/${data.id}`}</p>
                 <SelectBox />
                 {!showButton ?
                 <ItemCount 
@@ -32,6 +35,10 @@ const ItemDetail = ({data, actualizarCantidad}) => {
                 :
                 <Button variant="contained" color="error"><Link to='/cart'>Terminar compra</Link></Button>}
             </div>
+            <Button onClick={() => addProductToCart ({data})} 
+                        variant={'contained'} 
+                        className="item-button-agregar">
+                        Agregar al Carrito</Button>
                 </div>
         
         
